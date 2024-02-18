@@ -50,12 +50,11 @@ for (const seat of allSeats) {
 
         }
 
-        const totalCostId = document.getElementById('totalCost').innerText;
-        console.log(totalCostId);
+
         const perSeatPrise = convertTextIdToInt('perSeatPrise');
         const displayTotalCost = seatLength * perSeatPrise;
-        totalCostId.innerText = displayTotalCost;
-        console.log(displayTotalCost);
+
+        getIdSetValue('totalCost', displayTotalCost)
 
 
 
