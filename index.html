@@ -218,7 +218,7 @@
                 <div><img src="images/info-devider.png" alt=""> </div>
                 <div class="p-14 text-center flex flex-col justify-center items-center">
                     <img src="./images/fare.png" alt="">
-                    <h3 class="text-2xl font-extrabold">550 Taka</h3>
+                    <h3 class="text-2xl font-extrabold"><span id="perSeatPrise">550</span> Taka</h3>
                     <p class="font-light">Per Seat</p>
                 </div>
             </div>
@@ -472,9 +472,15 @@
                         </div>
 
                         <!-- single line  -->
-                        <div id="displaySeat"
-                            class="flex justify-between border-dashed border-b-2 border-[#03071233] py-6">
+                        <div id="" class="flex justify-between border-dashed border-b-2 border-[#03071233] py-6">
 
+                            <ul id="displaySeat">
+                                <!-- <li class="flex gap-x-24">
+                                    <p>A</p>
+                                    <p>econoh </p>
+                                    <p>550</p>
+                                </li> -->
+                            </ul>
                             <!-- <p id="seatShow" class="ralewayFont font-semibold text-[#03071299]">C2</p>
                             <h4 class="ralewayFont font-semibold text-[#03071299]">Economoy</h4>
                             <h4 class="ralewayFont font-semibold text-[#03071299]">550</h4> -->
@@ -500,7 +506,8 @@
                                 <p class="ralewayFont font-bold text-[#030712]">Total Price</p>
                             </div>
                             <div>
-                                <h4 class="ralewayFont font-bold text-[#030712]">BDT 1100</h4>
+                                <h4 class="ralewayFont font-bold text-[#030712]">BDT <span id="totalCost">0</span>
+                                </h4>
                             </div>
                         </div>
                         <div class="flex py-6">

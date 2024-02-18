@@ -5,14 +5,14 @@ let passengerSelectedSeat = [];
 const allSeats = document.getElementsByClassName('seatBtn');
 for (const seat of allSeats) {
     seat.addEventListener('click', function (e) {
-        let okArr = [];
+        let displayArr = [];
         // bg color changed 
         const seatAllClass = e.target.classList;
         seatAllClass.add('bg-primaryColor')
 
         const seatSelect = e.target.innerText;
         passengerSelectedSeat.push(seatSelect);
-        okArr.push(seatSelect);
+        displayArr.push(seatSelect);
         // array Length 
         const seatLength = passengerSelectedSeat.length;
         // show seat count 
@@ -30,24 +30,32 @@ for (const seat of allSeats) {
 
 
 
-        for (let i = 0; i < okArr.length; i++) {
-            const containerTest = document.getElementById('test');
+        for (let i = 0; i < displayArr.length; i++) {
+            const displayContainer = document.getElementById('displaySeat');
 
+            const li = document.createElement('li');
+            const liStyle = li.classList
+            liStyle.add('flex', 'gap-x-20');
             const p = document.createElement('p');
-            const p = document.createElement('p');
-            const pDecoration = p.classList;
-            pDecoration.add('ralewayFont', 'font-semibold', 'font-semibold', 'text-[#03071299]');
+            const p2 = document.createElement('p');
             const h4 = document.createElement('h4');
-            const h4Decoration = h4.classList;
-            h4Decoration.add('ralewayFont', 'font-semibold', 'font-semibold', 'text-[#03071299]');
-            p.innerText = okArr[i];
+            p.innerText = displayArr[i];
+            p2.innerText = 'Economoy';
             h4.innerText = 550;
 
-            containerTest.appendChild(p);
-            containerTest.appendChild(h4);
+            li.appendChild(p);
+            li.appendChild(p2);
+            li.appendChild(h4);
+            displayContainer.appendChild(li);
 
         }
 
+        const totalCostId = document.getElementById('totalCost').innerText;
+        console.log(totalCostId);
+        const perSeatPrise = convertTextIdToInt('perSeatPrise');
+        const displayTotalCost = seatLength * perSeatPrise;
+        totalCostId.innerText = displayTotalCost;
+        console.log(displayTotalCost);
 
 
 
@@ -58,6 +66,6 @@ for (const seat of allSeats) {
 }
 
 
-console.log(seatDisplay);
+
 
 
