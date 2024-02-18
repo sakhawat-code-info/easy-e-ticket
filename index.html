@@ -111,7 +111,7 @@
                     </div>
                     <div><img src="images/cupon-devider.png" alt=""> </div>
                     <div class="p-14 text-center">
-                        <h3 class="text-2xl font-extrabold">NEW15</h3>
+                        <h3 id="fourBuyCoupon" class="text-2xl font-extrabold">NEW15</h3>
                         <p class="font-light">coupon code</p>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                     </div>
                     <div><img src="images/cupon-devider.png" alt=""> </div>
                     <div class="p-14 text-center">
-                        <h3 class="text-2xl font-extrabold">Couple 20</h3>
+                        <h3 id="couple20" class="text-2xl font-extrabold">Couple 20</h3>
                         <p class="font-light">coupon code</p>
                     </div>
                 </div>
@@ -505,11 +505,15 @@
 
 
 
-                        <div class="flex py-6">
+                        <div id="grandTotalInputHidden" class="flex py-6">
                             <label class="input flex items-center gap-2 w-full">
-                                <input type="text" class="grow" placeholder="Have any copupon?" />
+                                <input id="cupponInputData" type="text" class="grow" placeholder="Have any copupon?" />
                                 <button id="cupponBtn" class="btn bg-primaryColor m-y-2" disabled>Apply</button>
                             </label>
+                        </div>
+                        <!-- single line  -->
+                        <div id="discountShow" class="flex py-6 hidden">
+                            <p id="discoutP" class="flex justify-end items-end"></p>
                         </div>
                         <!-- single line  -->
                         <div class="flex justify-between ">
@@ -517,7 +521,8 @@
                                 <p class="ralewayFont font-bold text-[#030712]">Grand Total</p>
                             </div>
                             <div>
-                                <h4 class="ralewayFont font-bold text-[#030712]">BDT 1100</h4>
+                                <h4 class="ralewayFont font-bold text-[#030712]">BDT <span id="grandTotal">0</span>
+                                </h4>
                             </div>
                         </div>
 

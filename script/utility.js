@@ -38,8 +38,16 @@ function givePlaceIdCreateElement(whereShow, createWhat) {
     placeTaken.appendChild(created);
 }
 
-
-
+function hiddenByClass(id) {
+    const idThat = document.getElementById(id);
+    const classList = idThat.classList;
+    classList.add('hidden');
+}
+function hiddenClassRemove(id) {
+    const idThat = document.getElementById(id);
+    const classList = idThat.classList;
+    classList.remove('hidden');
+}
 
 
 
