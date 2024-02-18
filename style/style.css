@@ -7,3 +7,7 @@
 .ralewayFont {
     font-family: "Raleway", sans-serif;
 }
+
+#displaySeat>li {
+    display: flex;
+}

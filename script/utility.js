@@ -1,3 +1,13 @@
+function enableBtn(id) {
+    const btn = document.getElementById(id);
+    btn.removeAttribute('disabled');
+}
+function disableBtn(id) {
+    const btn = document.getElementById(id);
+    btn.setAttribute('disabled', true);
+}
+
+
 function getId(id) {
     document.getElementById(id);
 }

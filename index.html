@@ -259,16 +259,16 @@
                             <div class="text-xl font-bold text-[#03071280]">A</div>
                             <div class="flex-1 flex justify-between">
                                 <div><button
-                                        class="flex text-2xl font-bold bg-[#F7F8F8] text-[#03071280] px-11 py-4 border rounded-2xl">A1</button>
+                                        class="flex text-2xl font-bold bg-[#F7F8F8] text-[#03071280] px-11 py-4 border rounded-2xl seatBtn">A1</button>
                                 </div>
                                 <div><button
-                                        class="flex text-2xl font-bold bg-[#F7F8F8] text-[#03071280] px-11 py-4 border rounded-2xl">A2</button>
+                                        class="flex text-2xl font-bold bg-[#F7F8F8] text-[#03071280] px-11 py-4 border rounded-2xl seatBtn">A2</button>
                                 </div>
                                 <div><button
-                                        class="flex text-2xl font-bold bg-[#F7F8F8] text-[#03071280] px-11 py-4 border rounded-2xl">A3</button>
+                                        class="flex text-2xl font-bold bg-[#F7F8F8] text-[#03071280] px-11 py-4 border rounded-2xl seatBtn">A3</button>
                                 </div>
                                 <div><button
-                                        class="flex text-2xl font-bold bg-[#F7F8F8] text-[#03071280] px-11 py-4 border rounded-2xl">A4</button>
+                                        class="flex text-2xl font-bold bg-[#F7F8F8] text-[#03071280] px-11 py-4 border rounded-2xl seatBtn">A4</button>
                                 </div>
                             </div>
                         </div>
@@ -460,8 +460,8 @@
                         <!-- single line  -->
                         <div class="flex justify-between border-dashed border-b-2 border-[#03071233] pb-6">
                             <div class="indicator">
-                                <span class="indicator-item badge badge-secondary">99+</span>
-                                <button class="btn">Seat</button>
+                                <span id="seatCountShow" class="indicator-item badge bg-primaryColor">0</span>
+                                <button id="" class="btn">Seat</button>
                             </div>
                             <div>
                                 <h4 class="ralewayFont font-bold text-[#030712]">Class</h4>
@@ -472,17 +472,28 @@
                         </div>
 
                         <!-- single line  -->
-                        <div class="flex justify-between border-dashed border-b-2 border-[#03071233] py-6">
-                            <div>
-                                <p class="ralewayFont font-semibold text-[#03071299]">C2</p>
-                            </div>
-                            <div>
-                                <h4 class="ralewayFont font-semibold text-[#03071299]">Economoy</h4>
-                            </div>
-                            <div>
-                                <h4 class="ralewayFont font-semibold text-[#03071299]">550</h4>
-                            </div>
+                        <div id="displaySeat"
+                            class="flex justify-between border-dashed border-b-2 border-[#03071233] py-6">
+
+                            <!-- <p id="seatShow" class="ralewayFont font-semibold text-[#03071299]">C2</p>
+                            <h4 class="ralewayFont font-semibold text-[#03071299]">Economoy</h4>
+                            <h4 class="ralewayFont font-semibold text-[#03071299]">550</h4> -->
+
                         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         <!-- single line  -->
                         <div class="flex justify-between border-dashed border-b-2 border-[#03071233] py-6">
                             <div>
@@ -495,7 +506,7 @@
                         <div class="flex py-6">
                             <label class="input flex items-center gap-2 w-full">
                                 <input type="text" class="grow" placeholder="Have any copupon?" />
-                                <button class="btn bg-primaryColor m-y-2">Accent</button>
+                                <button id="cupponBtn" class="btn bg-primaryColor m-y-2" disabled>Apply</button>
                             </label>
                         </div>
                         <!-- single line  -->
@@ -542,7 +553,7 @@
                         </div>
                         <div>
                             <label class="form-control w-full ">
-                                <button class="btn bg-primaryColor w-full">Next</button>
+                                <button id="submitBtn" class="btn bg-primaryColor w-full" disabled>Next</button>
                             </label>
 
                         </div>
