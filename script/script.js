@@ -2,20 +2,27 @@
 
 
 let passengerSelectedSeat = [];
+let count = 0;
 const allSeats = document.getElementsByClassName('seatBtn');
 for (const seat of allSeats) {
     seat.addEventListener('click', function (e) {
         let displayArr = [];
         // bg color changed 
         const seatAllClass = e.target.classList;
-        seatAllClass.add('bg-primaryColor')
+        seatAllClass.add('bg-primaryColor');
 
         const seatSelect = e.target.innerText;
-        if (passengerSelectedSeat.includes(seatSelect)) {
-            alert('Not Available');
+        if (count !== 4) {
+            if (passengerSelectedSeat.includes(seatSelect)) {
+                alert('Not Available');
+            } else {
+                passengerSelectedSeat.push(seatSelect);
+                displayArr.push(seatSelect);
+                count++;
+            }
         } else {
-            passengerSelectedSeat.push(seatSelect);
-            displayArr.push(seatSelect);
+            alert('sorry');
+
         }
 
         // array Length 
@@ -117,6 +124,11 @@ for (const seat of allSeats) {
             getIdSetValue('discoutP', 0);
             passengerSelectedSeat = [];
             displayArr = [];
+            const len = passengerSelectedSeat.length;
+            // show seat count 
+            getIdSetValue('seatCountShow', len);
+            getIdSetValue('seatAvailableNow', 40 - len);
+
 
             hiddenByClass('successId');
             hiddenClassRemove('headerSection');
@@ -133,10 +145,3 @@ for (const seat of allSeats) {
 
     })
 }
-
-
-
-
-
-
-
