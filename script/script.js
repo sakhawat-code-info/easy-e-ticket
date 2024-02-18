@@ -24,18 +24,7 @@ for (const seat of allSeats) {
         getIdSetValue('seatCountShow', seatLength);
         getIdSetValue('seatAvailableNow', 40 - seatLength);
 
-        // btn anable
-        if (seatLength === 2) {
-            enableBtn('cupponBtn');
-        } else if (seatLength >= 1) {
-            enableBtn('submitBtn');
-        } else {
-        }
-
-
-
-
-
+        // display ticket 
         for (let i = 0; i < displayArr.length; i++) {
             const displayContainer = document.getElementById('displaySeat');
 
@@ -56,13 +45,21 @@ for (const seat of allSeats) {
 
         }
 
-
+        // total cost calculate and show
         const perSeatPrise = convertTextIdToInt('perSeatPrise');
         const displayTotalCost = seatLength * perSeatPrise;
-
         getIdSetValue('totalCost', displayTotalCost)
 
 
+
+
+        // btn anable
+        if (seatLength === 2) {
+            enableBtn('cupponBtn');
+        } else if (seatLength >= 1) {
+            enableBtn('submitBtn');
+        } else {
+        }
 
 
 
