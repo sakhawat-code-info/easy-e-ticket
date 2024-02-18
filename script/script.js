@@ -86,20 +86,44 @@ for (const seat of allSeats) {
                 hiddenClassRemove('discountShow');
                 document.getElementById('discoutP').innerText = discount;
                 const totalPayAfterDiscount = displayTotalCost - discount;
-                getIdSetValue('grandTotal', totalPayAfterDiscount)
+                getIdSetValue('grandTotal', totalPayAfterDiscount);
             } else if (cupponData === couple20) {
                 hiddenByClass('grandTotalInputHidden');
                 const perSeatPrise = convertTextIdToInt('perSeatPrise');
                 const displayTotalCost = seatLength * perSeatPrise;
                 const discount = (displayTotalCost * 20) / 100;
+                hiddenClassRemove('discountShow');
+                document.getElementById('discoutP').innerText = discount;
                 const totalPayAfterDiscount = displayTotalCost - discount;
-                getIdSetValue('grandTotal', totalPayAfterDiscount)
+                getIdSetValue('grandTotal', totalPayAfterDiscount);
             } else {
 
             }
 
-            console.log(displayTotalCost);
         })
+
+
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            hiddenByClass('headerSection');
+            hiddenByClass('mainSection');
+            hiddenByClass('footerSection');
+            hiddenClassRemove('successId');
+
+        })
+
+        document.getElementById('continueSuccessBtn').addEventListener('click', function () {
+            getIdSetValue('totalCost', 0);
+            getIdSetValue('grandTotal', 0);
+            getIdSetValue('discoutP', 0);
+            passengerSelectedSeat = [];
+            displayArr = [];
+
+            hiddenByClass('successId');
+            hiddenClassRemove('headerSection');
+            hiddenClassRemove('mainSection');
+            hiddenClassRemove('footerSection');
+        })
+
 
 
 
@@ -109,6 +133,8 @@ for (const seat of allSeats) {
 
     })
 }
+
+
 
 
 
