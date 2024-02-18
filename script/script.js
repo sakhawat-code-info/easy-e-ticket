@@ -11,12 +11,18 @@ for (const seat of allSeats) {
         seatAllClass.add('bg-primaryColor')
 
         const seatSelect = e.target.innerText;
-        passengerSelectedSeat.push(seatSelect);
-        displayArr.push(seatSelect);
+        if (passengerSelectedSeat.includes(seatSelect)) {
+            alert('Not Available');
+        } else {
+            passengerSelectedSeat.push(seatSelect);
+            displayArr.push(seatSelect);
+        }
+
         // array Length 
         const seatLength = passengerSelectedSeat.length;
         // show seat count 
         getIdSetValue('seatCountShow', seatLength);
+        getIdSetValue('seatAvailableNow', 40 - seatLength);
 
         // btn anable
         if (seatLength === 2) {
