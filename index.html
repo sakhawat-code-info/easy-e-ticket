@@ -32,7 +32,7 @@
 <body class="interFont">
 
     <!-- header section start  -->
-    <header id="headerSection" class="mb-28">
+    <header id="headerSection" class="mb-40">
         <div class="container mx-auto">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -63,9 +63,10 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <button class="btn bg-[#1DD10066] text-primaryColor border-2 border-primaryColor px-8  ">
+                    <button
+                        class="btn bg-[#1DD1001A] text-primaryColor border-2 border-[#1DD10066] px-8  text-base font-extrabold">
                         Bus
-                        <img src="./images/busBtnLogo.png" alt="bus-logo" class="ml-3">
+                        <img src="./images/busBtnLogo.png" alt="bus-logo" class="ml-2">
                     </button>
                 </div>
             </div>
@@ -76,25 +77,25 @@
                     <!-- <div class="hero-overlay bg-opacity-60 rounded-3xl"></div> -->
                     <div class="hero-content text-center text-neutral-content">
                         <div class="w-[742px] space-y-7">
-                            <h1 class="mb-5 text-6xl font-bold ralewayFont">End-to-End Travel with <br>
-                                <span class="text-primaryColor">EASY Paribahan</span>
-                            </h1>
+                            <h1 class="mb-5 text-6xl font-bold ralewayFont">End-to-End Travel with </h1>
+                            <h1 class="text-primaryColor text-6xl font-bold ralewayFont">EASY Paribahan</h1>
                             <p class="mb-5">Yes, you can run unit tests and view the results directly within the app.
                                 The integrated testing features allow for a streamlined.</p>
                             <a href="#easyParibohon">
-                                <button class="btn bg-primaryColor text-black mt-7">Buy Tickets</button>
+                                <button class="btn bg-primaryColor text-black mt-7 border-0 font-extrabold">Buy
+                                    Tickets</button>
                             </a>
                         </div>
                     </div>
 
                     <!-- position item code  -->
-                    <div class="absolute bottom-[-50px] left-0 flex items-center justify-center w-full">
+                    <div class="absolute bottom-[-60px] left-0 flex items-center justify-center w-full">
 
 
-                        <div class="grid grid-cols-3 gap-6">
+                        <div class="grid grid-cols-3 gap-8">
                             <!-- single item -->
                             <div
-                                class="flex flex-col justify-center items-center lg:items-start lg:justify-start lg:flex-row gap-5 bg-white py-8 pl-8 pr-14 border-2 rounded-2xl">
+                                class="flex flex-col justify-center items-center lg:items-start lg:justify-start lg:flex-row gap-5 bg-white py-8 pl-8 pr-14 border-2 rounded-2xl border-b-primaryColor">
 
                                 <img src="./images/people.png" alt="" class="">
                                 <div class="space-y-3">
@@ -109,7 +110,7 @@
                             </div>
                             <!-- single item -->
                             <div
-                                class="flex flex-col justify-center items-center lg:items-start lg:justify-start lg:flex-row gap-5 bg-white py-8 pl-8 pr-14 border-2 rounded-2xl">
+                                class="flex flex-col justify-center items-center lg:items-start lg:justify-start lg:flex-row gap-5 bg-white py-8 pl-8 pr-14 border-2 rounded-2xl border-b-primaryColor">
 
                                 <img src="./images/ticket-cupon.png" alt="" class="">
                                 <div class="space-y-3">
@@ -124,7 +125,7 @@
                             </div>
                             <!-- single item -->
                             <div
-                                class="flex flex-col justify-center items-center lg:items-start lg:justify-start lg:flex-row gap-5 bg-white py-8 pl-8 pr-14 border-2 rounded-2xl">
+                                class="flex flex-col justify-center items-center lg:items-start lg:justify-start lg:flex-row gap-5 bg-white py-8 pl-8 pr-14 border-2 rounded-2xl border-b-primaryColor">
 
                                 <img src="./images/stoppage.png" alt="" class="">
                                 <div class="space-y-3">
@@ -584,12 +585,28 @@
                         <!-- show display section  -->
 
 
-
                         <div id="grandTotalInputHidden" class="flex py-6 ">
-                            <label class="input flex items-center gap-2 w-full">
+                            <!-- <label class="input flex items-center gap-2 w-full"> -->
+
+                            <div class="join">
+                                <div>
+                                    <div>
+                                        <input id="cupponInputData" type="text" class="input input-bordered join-item"
+                                            placeholder="Have any copupon?" />
+                                    </div>
+                                </div>
+                                <div class="indicator">
+                                    <span id="cupponInvalid" class="indicator-item badge badge-secondary hidden">
+                                        invalid</span>
+                                    <button id="cupponBtn" class="btn join-item bg-primaryColor text-white"
+                                        disabled>Apply</button>
+                                </div>
+                            </div>
+                            <!-- 
+                                <span class="label-text">What is your name?</span><br>
                                 <input id="cupponInputData" type="text" class="grow" placeholder="Have any copupon?" />
-                                <button id="cupponBtn" class="btn bg-primaryColor m-y-2" disabled>Apply</button>
-                            </label>
+                                <button id="cupponBtn" class="btn bg-primaryColor m-y-2" disabled>Apply</button> -->
+                            <!-- </label> -->
                         </div>
 
                         <!-- single line  -->
@@ -599,11 +616,6 @@
                                     id="discoutP">0</span>
                             </p>
                         </div>
-
-
-
-
-
 
 
                         <!-- single line  -->
@@ -632,14 +644,28 @@
                             </label>
                         </div>
                         <div>
-                            <label class="form-control w-full">
+                            <!-- <label class="form-control w-full">
                                 <div class="label">
                                     <span class="label-text">Phone Number*</span>
                                 </div>
                                 <input id="phoneNumber" type="number" placeholder="Enter your phone number"
                                     class="input input-bordered w-full " required>
 
+                            </label> -->
+
+                            <label class="form-control w-full">
+                                <div class="label">
+                                    <span class="label-text">Phone Number*</span>
+                                    <span id="needMobileNumberSms"
+                                        class="label-text-alt text-red-800 font-extrabold hidden">Please type
+                                        Mobile
+                                        Number</span>
+                                </div>
+                                <input id="phoneNumber" type="number" placeholder="Enter your phone number"
+                                    class="input input-bordered w-full" required />
+
                             </label>
+
                         </div>
                         <div>
                             <label class="form-control w-full ">
@@ -674,15 +700,15 @@
     </main>
 
 
-    <footer id="footerSection" class="bg-black text-white">
+    <footer id="footerSection" class="bg-black text-white mt-28">
         <section class="container mx-auto py-32 space-y-4">
-            <div class="flex justify-between items-center border-dashed border-b-2 border-[#FFFFFF4D]">
-                <div class="space-y-6 mb-6">
-                    <h1 class="font-extrabold text-4xl">P-Ticket</h1>
-                    <p>P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+            <div class="flex justify-between items-center border-dashed border-b-2 border-[#FFFFFF4D] mb-8">
+                <div class="space-y-6  mb-12">
+                    <h1 class="font-extrabold text-4xl">Easy-e-Ticket</h1>
+                    <p>Easy-e-Ticket is a digital platform to make your <br> daily commuting better.</p>
                 </div>
-                <div>
-                    Download our app
+                <div class=" mb-12">
+                    <h2 class="text-center">Download our app</h2>
                     <div class="flex justify-center items-center border-solid border-2 rounded px-4 py-2 mt-4">
                         <div><img src="./images/playstore.png" alt=""></div>
                         <div>
@@ -696,7 +722,7 @@
             </div>
 
             <div class="flex justify-between items-center">
-                <div>@all rights reserved, P-Ticket services limited.2024</div>
+                <div>@all rights reserved, Easy-e-Ticket services limited.2024</div>
                 <div>
                     <ul class="flex gap-9">
                         <li>Terms & condition</li>

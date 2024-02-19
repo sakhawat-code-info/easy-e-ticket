@@ -10,7 +10,7 @@ for (const seat of allSeats) {
             alert('You can take only 4');
         } else {
             const seatAllClass = e.target.classList;
-            seatAllClass.add('bg-primaryColor');
+            seatAllClass.add('bg-primaryColor', 'text-white');
 
             const seatSelect = e.target.innerText;
 
@@ -72,8 +72,6 @@ for (const seat of allSeats) {
 
         getIdSetValue('grandTotal', displayTotalCost);
 
-
-
         // discount code 
         document.getElementById('cupponBtn').addEventListener('click', function () {
             const cupponData = document.getElementById('cupponInputData').value;
@@ -100,7 +98,8 @@ for (const seat of allSeats) {
                 const totalPayAfterDiscount = displayTotalCost - discount;
                 getIdSetValue('grandTotal', totalPayAfterDiscount);
             } else {
-
+                const invalidSms = document.getElementById('cupponInvalid');
+                invalidSms.classList.remove('hidden');
             }
 
         })
@@ -110,6 +109,8 @@ for (const seat of allSeats) {
             const phoneNumber = document.getElementById('phoneNumber').value;
             if (!phoneNumber) {
                 // alert('need phone number');
+                const needMobileNumberSms = document.getElementById('needMobileNumberSms');
+                needMobileNumberSms.classList.remove('hidden');
             } else {
                 hiddenByClass('headerSection');
                 hiddenByClass('mainSection');
