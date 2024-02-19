@@ -36,7 +36,25 @@
         // })
 
 
+        // document.getElementById('continueSuccessBtn').addEventListener('click', function () {
 
+
+        //     getIdSetValue('totalCost', 0);
+        //     getIdSetValue('grandTotal', 0);
+        //     getIdSetValue('discoutP', 0);
+        //     passengerSelectedSeat = [];
+        //     displayArr = [];
+        //     const len = passengerSelectedSeat.length;
+        //     // show seat count 
+        //     getIdSetValue('seatCountShow', len);
+        //     getIdSetValue('seatAvailableNow', 40 - len);
+
+
+        //     hiddenByClass('successId');
+        //     hiddenClassRemove('headerSection');
+        //     hiddenClassRemove('mainSection');
+        //     hiddenClassRemove('footerSection');
+        // })
 
 
 
