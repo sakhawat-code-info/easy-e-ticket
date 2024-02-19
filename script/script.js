@@ -50,7 +50,7 @@ for (const seat of allSeats) {
 
             const li = document.createElement('li');
             const liStyle = li.classList
-            liStyle.add('flex', 'gap-x-20');
+            liStyle.add('flex', 'gap-x-10', 'lg:gap-x-20');
             const p = document.createElement('p');
             const p2 = document.createElement('p');
             const h4 = document.createElement('h4');
