@@ -1,18 +1,19 @@
 
-
-
 let passengerSelectedSeat = [];
 let count = 0;
 const allSeats = document.getElementsByClassName('seatBtn');
 for (const seat of allSeats) {
     seat.addEventListener('click', function (e) {
-        let displayArr = [];
-        // bg color changed 
-        const seatAllClass = e.target.classList;
-        seatAllClass.add('bg-primaryColor');
+        let displayArr = []; //for displaying items
 
-        const seatSelect = e.target.innerText;
-        if (count !== 4) {
+        if (count >= 4) {
+            alert('You can take only 4');
+        } else {
+            const seatAllClass = e.target.classList;
+            seatAllClass.add('bg-primaryColor');
+
+            const seatSelect = e.target.innerText;
+
             if (passengerSelectedSeat.includes(seatSelect)) {
                 alert('Not Available');
             } else {
@@ -20,10 +21,9 @@ for (const seat of allSeats) {
                 displayArr.push(seatSelect);
                 count++;
             }
-        } else {
-            alert('sorry');
-
         }
+
+
 
         // array Length 
         const seatLength = passengerSelectedSeat.length;
@@ -39,13 +39,13 @@ for (const seat of allSeats) {
             disableBtn('cupponBtn')
         }
 
-
-
         if (seatLength >= 1) {
             enableBtn('submitBtn');
         }
 
 
+
+        console.log(phoneNUmberTaken);
         // display ticket 
         for (let i = 0; i < displayArr.length; i++) {
             const displayContainer = document.getElementById('displaySeat');
@@ -76,14 +76,12 @@ for (const seat of allSeats) {
 
 
 
-
+        // discount code 
         document.getElementById('cupponBtn').addEventListener('click', function () {
             const cupponData = document.getElementById('cupponInputData').value;
 
             const fourBuyCouponCode = document.getElementById('fourBuyCoupon').innerText;
             const couple20 = document.getElementById('couple20').innerText;
-
-
 
             if (cupponData === fourBuyCouponCode) {
                 hiddenByClass('grandTotalInputHidden');
@@ -109,7 +107,7 @@ for (const seat of allSeats) {
 
         })
 
-
+        // success code 
         document.getElementById('submitBtn').addEventListener('click', function () {
             hiddenByClass('headerSection');
             hiddenByClass('mainSection');
