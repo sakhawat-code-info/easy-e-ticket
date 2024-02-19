@@ -26,6 +26,14 @@
 // }
 
 
+        // // success code 
+        // document.getElementById('submitBtn').addEventListener('click', function () {
+        //     hiddenByClass('headerSection');
+        //     hiddenByClass('mainSection');
+        //     hiddenByClass('footerSection');
+        //     hiddenClassRemove('successId');
+
+        // })
 
 
 

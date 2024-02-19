@@ -31,6 +31,12 @@ for (const seat of allSeats) {
         getIdSetValue('seatCountShow', seatLength);
         getIdSetValue('seatAvailableNow', 40 - seatLength);
 
+
+
+
+
+
+
         // btn anable
         if (seatLength === 4) {
             enableBtn('cupponBtn');
@@ -45,7 +51,9 @@ for (const seat of allSeats) {
 
 
 
-        console.log(phoneNUmberTaken);
+
+
+
         // display ticket 
         for (let i = 0; i < displayArr.length; i++) {
             const displayContainer = document.getElementById('displaySeat');
@@ -107,32 +115,42 @@ for (const seat of allSeats) {
 
         })
 
-        // success code 
+
         document.getElementById('submitBtn').addEventListener('click', function () {
-            hiddenByClass('headerSection');
-            hiddenByClass('mainSection');
-            hiddenByClass('footerSection');
-            hiddenClassRemove('successId');
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            if (!phoneNumber) {
+                alert('need phone');
+            } else {
+                hiddenByClass('headerSection');
+                hiddenByClass('mainSection');
+                hiddenByClass('footerSection');
+                hiddenClassRemove('successId');
+            }
+
 
         })
 
-        document.getElementById('continueSuccessBtn').addEventListener('click', function () {
-            getIdSetValue('totalCost', 0);
-            getIdSetValue('grandTotal', 0);
-            getIdSetValue('discoutP', 0);
-            passengerSelectedSeat = [];
-            displayArr = [];
-            const len = passengerSelectedSeat.length;
-            // show seat count 
-            getIdSetValue('seatCountShow', len);
-            getIdSetValue('seatAvailableNow', 40 - len);
 
 
-            hiddenByClass('successId');
-            hiddenClassRemove('headerSection');
-            hiddenClassRemove('mainSection');
-            hiddenClassRemove('footerSection');
-        })
+        // document.getElementById('continueSuccessBtn').addEventListener('click', function () {
+
+
+        //     getIdSetValue('totalCost', 0);
+        //     getIdSetValue('grandTotal', 0);
+        //     getIdSetValue('discoutP', 0);
+        //     passengerSelectedSeat = [];
+        //     displayArr = [];
+        //     const len = passengerSelectedSeat.length;
+        //     // show seat count 
+        //     getIdSetValue('seatCountShow', len);
+        //     getIdSetValue('seatAvailableNow', 40 - len);
+
+
+        //     hiddenByClass('successId');
+        //     hiddenClassRemove('headerSection');
+        //     hiddenClassRemove('mainSection');
+        //     hiddenClassRemove('footerSection');
+        // })
 
 
 
